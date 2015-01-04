@@ -2,9 +2,9 @@
 
 connector | server | visualization
 ----------|--------|--------------
-[gogr](https://github.com/ajschumacher/gogr) (for [R](http://www.r-project.org/)) | [gogd](https://github.com/ajschumacher/gogd) (in [Clojure](http://clojure.org/)) |  [gogi](https://github.com/ajschumacher/gogi) (toy example)
+[gogr](https://github.com/ajschumacher/gogr) (for [R](http://www.r-project.org/)) | [gogd](https://github.com/ajschumacher/gogd) (in [Clojure](http://clojure.org/)) |  [gog-dummy](https://github.com/ajschumacher/gog-dummy) (toy example)
 [gogpy](https://github.com/ajschumacher/gogpy) (for [Python](https://www.python.org/)) | | [gog-charted.co](https://github.com/ajschumacher/gog-charted.co) (the [charted.co](http://www.charted.co/) interface)
-
+ | | [gogi](https://github.com/ajschumacher/gogi) (general scatterplot)
 
 ### What is `gog`?
 
