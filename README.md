@@ -18,6 +18,8 @@ All the pieces can be swapped around and even hosted in different places, allowi
 
 #### 1. connector from data processing environment
 
+> Analogy with [ggplot2](http://ggplot2.org/): `ggplot(data=your_data)`
+
 All you need is a function (`gog`) that HTTP POSTs your data to a `gog` server. As currently implemented, that means POST to `http://localhost:4808/data`. Currently, data is passed as a JSON array of simple objects, like `[{"var_name": 5, ...`.
 
  * [gogr](https://github.com/ajschumacher/gogr): an [R](http://www.r-project.org/) package for sending data to a gog server
@@ -27,6 +29,8 @@ These are super easy to make in any language with support for JSON and HTTP.
 
 
 #### 2. gog server
+
+> Analogy with [ggplot2](http://ggplot2.org/): you don't need a server because everything's in `R`
 
 As currently implemented, a gog server runs on port 4808. That port is also used by the game "Command and Conquer Red Alert" and it is certainly acceptable to use another port.
 
@@ -38,6 +42,8 @@ These are super easy to make in any language with support for HTTP and websocket
 
 
 #### 3. browser-based data visualization
+
+> Analogy with [ggplot2](http://ggplot2.org/): `aes(x=variable) + geom_histogram()` etc.
 
 These are just HTML/CSS/JavaScript, viewed in a browser. They connect via websocket to `http://localhost:4808/data` and accepting incoming JSON arrays of simple objects, like `[{"var_name": 5, ...`. Then they present a data visualization and support some level of interactivity.
 
