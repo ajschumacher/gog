@@ -18,7 +18,7 @@ All the pieces can be swapped around and even hosted in different places, allowi
 
 #### 1. connector from data processing environment
 
-All you need is a function that HTTP POSTs your data to a gog server. As currently implemented, that means POST to `http://localhost:4808/data`. Currently, data is passed as a JSON array of simple objects, like `[{"var_name": 5, ...`.
+All you need is a function (`gog`) that HTTP POSTs your data to a `gog` server. As currently implemented, that means POST to `http://localhost:4808/data`. Currently, data is passed as a JSON array of simple objects, like `[{"var_name": 5, ...`.
 
  * [gogr](https://github.com/ajschumacher/gogr): an [R](http://www.r-project.org/) package for sending data to a gog server
  * [gogpy](https://github.com/ajschumacher/gogpy): a [Python](https://www.python.org/) package for sending data to a gog server
@@ -74,3 +74,18 @@ Ad hoc development and extension of `gog` could break compatibility between comp
  * Gosh a lot of it is just building out cool front-end pieces.
  * Add an additional control channel for interacting with visualizations from programming environments.
  * Develop or implement an existing format for representing a visualization for interoperability.
+ * Some clever scheme for dynamic port assignments and so on.
+ * Bundle a gog server with some good visualizations and distribute as an easy-to-run package.
+ * A web service for sharing visualizations.
+
+
+### How is this not exactly Plotly?
+
+It's similar. [Plotly](https://plot.ly/) is pretty neat. But there are two problems with Plotly: how it works, and how it works.
+
+ 1. How it works
+     * Plotly's APIs force you to put your data into their format. I don't think Plotly `traces` are a nice abstraction. I don't think it's the right design to have the data processing side say so much about how the plot should be made. I just want to throw data in and see it.
+     * Plotly's service is remote; you have to send your data up to them and wait for it. It's too slow for interactive use.
+ 2. How it works
+     * Plotly's not free. They depend on customers to exist and fundamentally, getting money from customers is their goal. Want to [run their software on your own machine](https://plot.ly/product/enterprise/)? They want to find out how much money you have before they tell you how much it'll cost you.
+     * Plotly's not [Free](https://www.gnu.org/philosophy/free-sw.html). You can't add a feature. You can't fix a bug. You certainly can't build Plotly into your own project/product. If Plotly disappears, everything you've built with Plotly could be as good as dust.
