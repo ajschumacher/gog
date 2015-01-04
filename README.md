@@ -45,6 +45,8 @@ These are super easy to make in any language with support for HTTP and websocket
 
 > Analogy with [ggplot2](http://ggplot2.org/): `aes(x=variable) + geom_histogram()` etc.
 
+> "Dear internet, please port ggplot from R to Javascript" - Joshua Gourneau, [2011](https://twitter.com/gourneau/status/99294355097001984)
+
 These are just HTML/CSS/JavaScript, viewed in a browser. They connect via websocket to `http://localhost:4808/data` and accepting incoming JSON arrays of simple objects, like `[{"var_name": 5, ...`. Then they present a data visualization and support some level of interactivity.
 
  * [gogi](https://github.com/ajschumacher/gogi): a toy example that just displays the received text data
