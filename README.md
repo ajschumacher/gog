@@ -1,4 +1,4 @@
-# `gog`
+<img src="gog.png" height="160" alt="gog" />
 
 connector | server | visualization
 ----------|--------|--------------
