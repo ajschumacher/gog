@@ -89,9 +89,17 @@ Ad hoc development and extension of `gog` could break compatibility between comp
  * A web service for sharing visualizations.
 
 
-### How is this not exactly Plotly?
+### Related Things
 
-It's similar. [Plotly](https://plot.ly/) is pretty neat. But there are two problems with Plotly: how it works, and how it works.
+
+#### R `htmlwidgets`
+
+[htmlwidgets](https://github.com/ramnathv/htmlwidgets) is a very neat project that makes it easy to generate web visualizations from and in R. It's all very R-based, and the functions that get produced can take any sort of input data and arguments. The way they've standardized the approach, however, means it would likely be relatively straightforward to take an `htmlwidget`-ized visualization and transform it to a `gog` visualization.
+
+
+#### Plotly
+
+[Plotly](https://plot.ly/) is pretty neat. But there are two problems with Plotly: how it works, and how it works.
 
  1. How it works
      * Plotly's APIs force you to put your data into their format. I don't think Plotly `traces` are a nice abstraction. I don't think it's the right design to have the data processing side say so much about how the plot should be made. I just want to throw data in and see it.
