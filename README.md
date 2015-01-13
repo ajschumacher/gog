@@ -85,6 +85,7 @@ Ad hoc development and extension of `gog` could break compatibility between comp
  * Add an additional control channel for interacting with visualizations from programming environments.
  * Develop or implement an existing format for representing a visualization for interoperability.
  * Some clever scheme for dynamic port assignments and so on.
+ * Would it make sense to implement with web components somehow?
  * Bundle a gog server with some good visualizations and distribute as an easy-to-run package.
  * A web service for sharing visualizations.
 
