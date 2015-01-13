@@ -99,11 +99,4 @@ Ad hoc development and extension of `gog` could break compatibility between comp
 
 #### Plotly
 
-[Plotly](https://plot.ly/) is pretty neat. But there are two problems with Plotly: how it works, and how it works.
-
- 1. How it works
-     * Plotly's APIs force you to put your data into their format. I don't think Plotly `traces` are a nice abstraction. I don't think it's the right design to have the data processing side say so much about how the plot should be made. I just want to throw data in and see it.
-     * Plotly's service is remote; you have to send your data up to them and wait for it. It's too slow for interactive use.
- 2. How it works
-     * Plotly's not free. They depend on customers to exist and fundamentally, getting money from customers is their goal. Want to [run their software on your own machine](https://plot.ly/product/enterprise/)? They want to find out how much money you have before they tell you how much it'll cost you.
-     * Plotly's not [Free](https://www.gnu.org/philosophy/free-sw.html). You can't add a feature. You can't fix a bug. You certainly can't build Plotly into your own project/product. If Plotly disappears, everything you've built with Plotly could be as good as dust.
+[Plotly](https://plot.ly/) is pretty neat. It's similar to `gog` but has more requirements for articulating data and plot options in the connectors (specifying `traces`, etc.) and the server and front-ends come from Plotly's machines. Also Plotly is a business that needs to make money, and their products are not Free or open source.
