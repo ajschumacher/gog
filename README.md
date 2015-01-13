@@ -93,6 +93,16 @@ Ad hoc development and extension of `gog` could break compatibility between comp
 ### Related Things
 
 
+#### `ggobi`
+
+[ggobi](http://www.ggobi.org/), successor to [XGobi](http://www2.research.att.com/areas/stat/xgobi/), is a system for multivariate data visualization. It's mostly separate from data processing tools because of its focus on visualization. There is a package ([rggobi](http://cran.r-project.org/web/packages/rggobi/index.html)) for interacting with `ggobi` from R. So with that, the architecture is something like `gog`. Unfortunately, `ggobi` doesn't seem to be actively maintained. And it uses Gtk2. But it does have a lot of neat features that aren't availble many other places. Hadley [says](https://twitter.com/hadleywickham/status/549806084777459713) that `ggvis` and `tourr` will eventually succeed `ggobi`.
+
+
+#### `imMens`
+
+[imMens](http://vis.stanford.edu/projects/immens/) (read as "immense") is a cool project that has a `gog`-style split architecture but very tight coupling between the data/server and browser side. It does pre-processing of possibly large datasets, then passes data encoded as PNG graphics to a browser where it is further processed and displayed using clever WebGL. The whole idea is a lot of fun and they say (in [the paper](http://vis.stanford.edu/files/2013-imMens-EuroVis.pdf)) that they're working on making it easier to create `imMens` visualizations.
+
+
 #### R `htmlwidgets`
 
 [htmlwidgets](https://github.com/ramnathv/htmlwidgets) is a very neat project that makes it easy to generate web visualizations from and in R. It's all very R-based, and the functions that get produced can take any sort of input data and arguments. The way they've standardized the approach, however, means it would likely be relatively straightforward to take an `htmlwidget`-ized visualization and transform it to a `gog` visualization.
